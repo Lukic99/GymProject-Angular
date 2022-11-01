@@ -1,0 +1,20 @@
+<div class="row centered-form">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-4 text-center">
+                        <div style="float: right; position: relative;"><button class="btn btn-light" (click)="deleteClient(client.name)">Remove</button></div>
+                        <img [src]="client.imageUrl">
+                        <div class="details">
+                            <br><br>
+                            <div>{{client.name}}, ({{client.age}})</div>
+                            <div>{{client.specialization}}</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-light"  (click)="showTrainingLog()">Show training log</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

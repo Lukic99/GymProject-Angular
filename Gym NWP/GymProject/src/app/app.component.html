@@ -1,0 +1,32 @@
+<div *ngIf="getLoginStatus()">
+    <div class="container" style="background-color: #F7EBEB;">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" routerLink="/register" routerLinkActive="active">Add A New Client</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/clients/list" routerLinkActive="active">Client List</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" routerLink="/trainings/list" routerLinkActive="active">Trainings
+                                List</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" routerLink="/trainings/add" routerLinkActive="active">Schedule A New
+                                Session</a>
+                        </li>
+
+                        <div style="margin-left: 550px;">
+                            <button class="btn btn-light float-right" (click)="logOut()">Logout</button>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<!-- Acts as a placeholder that Angular dynamically fills based on the current router state. -->

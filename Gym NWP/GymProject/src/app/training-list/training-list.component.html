@@ -1,0 +1,4 @@
+<div class="container">
+    <header class="heading"> {{name}}'s trainings</header>
+</div>
+<app-training [training]="training" *ngFor="let training of trainings | async"></app-training>

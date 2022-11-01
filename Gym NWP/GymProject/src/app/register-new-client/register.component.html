@@ -1,0 +1,51 @@
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+	<header class="heading"> Add a new client</header>
+	<hr>
+	<form (ngSubmit)="createClient(registerForm)" #registerForm="ngForm" ngNativeValidate>
+		<div ngModelGroup="client">
+			<div class="row ">
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="text" ngModel #clientName="ngModel" name="name"
+								placeholder="Enter Clients Name" class="form-control " required>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="number" ngModel #clientAge="ngModel" name="age" placeholder="Age"
+								class="form-control last" required>
+								<!-- <div *ngIf="clientAge.errors?.['required'] "> Client Age is mandatory </div> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<select ngModel #clientSpecialization="ngModel" name="specialization" class="form-control" required>
+						<option> Bodybuilder</option>
+						<option> Powerlifter</option>
+						<option> Strongman</option>
+						<option> Recreational lifter</option>
+					</select>
+				</div>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-4">
+						</div>
+						<div class="col-xs-12">
+							<input type="text" ngModel #clientImageUrl="ngModel" name="imageUrl" id="imageUrl"
+								placeholder="ImageURL (Optional)" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="btn btn-light" style="margin-top: 10px;">Submit data</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,30 @@
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="container">
+    <header class="heading"> Schedule a new training</header>
+    <hr>
+    <form (ngSubmit)="addTraining(trainingForm)" #trainingForm="ngForm" [noValidate]="false">
+        <div ngModelGroup = "training">
+        <div class="col-sm-12">
+            <select id="athlete" ngModel #trainingAthlete="ngModel" name="athlete" class="form-control" required>
+                <option *ngFor="let client of $clients"> {{client.name}} ({{client.age}}) </option>
+            </select>
+        </div>
+        <div class="col-sm-12">
+            <label style="color: white;"> Choose a date :</label>
+            <input type="date"ngModel #trainingDate="ngModel" name="date" required>
+        </div>
+        <div class="col-sm-12">
+            <label style="color: white;"> Time :</label>
+            <input type="time" ngModel #trainingDate="ngModel" name="time" required> <!-- verovatno sa tabelom moze da se poravna-->
+        </div>
+        <div class="col-sm-12">
+            <button class="btn btn-light" style="margin-top: 10px;" >Submit</button>
+        </div>
+    </div>
+    </form>
+</div>
